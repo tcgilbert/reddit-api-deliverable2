@@ -1,9 +1,13 @@
 let query;
+var startInterval;
 const startButton = document.querySelector('#start-button');
+const stopButton = document.querySelector('#stop-button');
 const userInput = document.querySelector('#text-input-box');
 startButton.addEventListener('click', update);
+stopButton.addEventListener('click', stopPics)
 
 function update() {
+
   query = userInput.value;
   console.log(query);
   fetchPictures(query);
@@ -45,12 +49,17 @@ function pictureArray(postsArray) {
 
 function startImageLoop(img, array) {
   let count = 0;
-  setInterval(() => {
+  startInterval = setInterval(() => {
     img.src = array[count];
     count++;
     if (count == array.length) {
       count = 0;
     }
   }, 3000);
+}
+
+function stopPics() {
+  console.log('hii');
+  clearInterval(startInterval);
 }
 
