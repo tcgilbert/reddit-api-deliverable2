@@ -4,12 +4,26 @@ body {
     text-align: center;
 }
 
-h1, h4 {
+h1 {
     color: whitesmoke;
-    font-family: sans-serif;
+    font-family: 'Syne Mono', monospace;
+    font-size: 50px;
+    padding: 30px 0 0 0;
+    margin: 0;
 }
 
-img {
-    width: 200px;
-    
+h4 {
+    padding: 0 0 50px 0;
+    margin: 0;
+    color: whitesmoke;
+    font-family: 'Syne Mono', monospace;
+    display: flex;
+    justify-content: center;
+}
+
+#text-input-box {
+    text-align: center;
+    margin-bottom: 25px;
+    display: flex;
+    margin-left: 44%;
 }
