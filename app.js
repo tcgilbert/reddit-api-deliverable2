@@ -94,7 +94,7 @@ function pictureArray(postsArray) {
 
 function startImageLoop(img, array) {
   let count = 0;
-  setInterval(() => {
+  startInterval = setInterval(() => {
     img.src = array[count];
     count++;
     if (count == array.length) {
